@@ -1,4 +1,4 @@
-import Navbar from '../components/Navbar/Navbar'
+import Navbar from 'components/Navbar/Navbar'
 import { useState, useEffect } from 'react'
 
 export default function Home() {
@@ -14,7 +14,6 @@ export default function Home() {
 
     return (
         <div>
-            <Navbar />
             <h1>Hola Platzi</h1>
 
             {productList.map(producto => (
