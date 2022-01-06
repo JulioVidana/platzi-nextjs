@@ -4,7 +4,12 @@ class MyDocument extends Document {
     render() {
         return (
             <Html>
-                <Head />
+                <Head>
+                    {/** FavIcon */}
+                    {/** WebFont */}
+                    {/** stylesheets */}
+                    {/** scripts */}
+                </Head>
                 <body className='my-body-class'>
                     <Main />
                     <NextScript />

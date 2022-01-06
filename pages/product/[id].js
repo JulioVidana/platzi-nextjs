@@ -1,10 +1,12 @@
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
+import Layout from 'components/Layout/Layout'
+import ProductSummary from 'components/ProductSummary/ProductSummary'
+
 const ProductItem = () => {
     const { query: { id } } = useRouter()
     const [product, setProduct] = useState([])
-
 
 
     useEffect(() => {
@@ -18,7 +20,10 @@ const ProductItem = () => {
         }
     }, [id])
 
-    return (<div>Esta es la página del producto: {product?.name}</div>
+    return (
+        <Layout>
+            {product == null ? null : <ProductSummary product={product} />}
+        </Layout>
     )
 }
 

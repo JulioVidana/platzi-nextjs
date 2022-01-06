@@ -1,5 +1,7 @@
-import Navbar from 'components/Navbar/Navbar'
 import { useState, useEffect } from 'react'
+import Layout from 'components/Layout/Layout'
+import KawaiiHeader from 'components/KawaiiHeader/KawaiiHeader'
+import ProductList from 'components/ProductList/ProductList'
 
 export default function Home() {
     const [productList, setProductList] = useState([])
@@ -13,12 +15,10 @@ export default function Home() {
     }, [])
 
     return (
-        <div>
-            <h1>Hola Platzi</h1>
+        <Layout>
+            <KawaiiHeader />
+            <ProductList products={productList} />
 
-            {productList.map(producto => (
-                <div key={producto.id}>{producto.name}</div>
-            ))}
-        </div>
+        </Layout>
     )
 }

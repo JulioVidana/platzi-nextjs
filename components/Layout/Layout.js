@@ -1,23 +1,16 @@
 import Navbar from "components/Navbar/Navbar"
-
+import { Container } from 'semantic-ui-react'
+import Footer from "components/Footer/Footer"
 
 const Layout = ({ children }) => {
     return (
-        <div>
+        <>
             <Navbar />
-            {children}
-
-            <footer>
-                <br />
-                ---  This is the Footer ---
-            </footer>
-
-            <style jsx>{`
-                footer{
-                    background-color: salmon;
-                }
-            `}</style>
-        </div>
+            <Container as="main" text>
+                {children}
+            </Container>
+            <Footer />
+        </>
     )
 }
 
